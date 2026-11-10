@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b0c0f">
+  <meta name="description" content="Gold Mind AI - داشبورد آموزشی تحلیل بازار">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <title>Gold Mind AI</title>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="logo">GM</div><div><strong>GOLD MIND <span>AI</span></strong><small>تحلیل‌گر بازار • نسخه آزمایشی</small></div></div>
+  <button id="installBtn" class="install hidden">نصب برنامه</button>
+  <div class="status"><i></i> حالت نمایشی</div>
+</header>
+<main>
+  <section class="welcome">
+    <div><p class="eyebrow">داشبورد هوشمند</p><h1>تحلیل بازار، <em>شفاف‌تر.</em></h1><p class="muted">نمایش آموزشی قیمت و اندیکاتورها؛ بدون اتصال حساب و بدون معامله.</p></div>
+    <div class="gold-mark">✦</div>
+  </section>
+  <section class="toolbar">
+    <label>نماد <select id="symbol"><option value="XAUUSD">XAUUSD · طلا</option><option>EURUSD</option><option>GBPUSD</option><option>USDJPY</option><option>AUDUSD</option></select></label>
+    <div class="segmented"><button data-tf="M1" class="active">M1</button><button data-tf="M5">M5</button></div>
+  </section>
+  <section class="price-card panel">
+    <div class="price-head"><div><span class="muted small">قیمت نمایشی</span><h2 id="price">2,345.60</h2></div><div class="change positive" id="change">+0.24%</div></div>
+    <div class="chart-wrap"><canvas id="chart" aria-label="نمودار نمایشی قیمت"></canvas></div>
+    <div class="chart-foot"><span>● بيانات محاكاة</span><span id="lastUpdate">آخرین بروزرسانی: همین حالا</span></div>
+  </section>
+  <section class="section-title"><div><p class="eyebrow">خلاصه تکنیکال</p><h2>شاخص‌های تحلیل</h2></div><span class="tag">آزمایشی</span></section>
+  <section class="metrics">
+    <article class="panel metric"><span>RSI (14)</span><b id="rsi">56.8</b><small>محدوده میانی</small><div class="meter"><i style="width:56.8%"></i></div></article>
+    <article class="panel metric"><span>EMA 20</span><b id="ema20">2,342.10</b><small>میانگین کوتاه‌مدت</small></article>
+    <article class="panel metric"><span>EMA 50</span><b id="ema50">2,338.40</b><small>میانگین میان‌مدت</small></article>
+    <article class="panel metric"><span>MACD</span><b id="macd">+1.24</b><small>مقدار نمایشی</small></article>
+  </section>
+  <section class="panel insight">
+    <div class="insight-icon">✧</div><div><span class="eyebrow">برداشت آموزشی</span><h3 id="insightTitle">حرکت خنثی با تمایل مثبت</h3><p id="insightText">این جمع‌بندی صرفاً از داده‌های ساختگی همین صفحه تولید شده و سیگنال معاملاتی نیست.</p></div>
+  </section>
+  <section class="notice"><b>مهم:</b> این نسخه به MetaTrader 5 وصل نیست و قیمت‌ها واقعی یا زنده نیستند. برای اتصال آینده باید یک پل داده امن و فقط‌خواندنی از MT5 فراهم شود. این اپ هیچ سفارشی ارسال نمی‌کند.</section>
+</main>
+<footer>GOLD MIND AI <span>•</span> ساخته‌شده برای یادگیری و بررسی داده‌ها</footer>
+<script src="app.js"></script>
+</body>
+</html>
